@@ -39,7 +39,7 @@ function App() {
         <div className="lang">
           <p>Google offered in:</p>
           <span>Hausa</span> <span>Igbo</span>
-          <span>Èdè Yorùbá</span> <span>nigerian Pidgin</span>
+          <span>Èdè Yorùbá</span> <span>Nigerian Pidgin</span>
         </div>
       </section>
       <footer>
