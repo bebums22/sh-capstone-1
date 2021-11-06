@@ -43,7 +43,25 @@ function App() {
         </div>
       </section>
       <footer>
-        
+        <div className='country'>
+          <p>Nigeria</p>
+        </div>
+        <div className='foot-note'>
+          <p><FaEnvira className='icon' /> Carbon neutral since 2007</p>
+          <div className='details'>
+            <div>
+              <p>About</p>
+              <p>Advertising</p>
+              <p>Business</p>
+              <p>How Search Works</p>
+            </div>
+            <div>
+              <p>Privacy</p>
+              <p>Terms</p>
+              <p>Settings</p>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   );
