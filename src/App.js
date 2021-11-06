@@ -1,23 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react' 
+import logo from './sh-logo-trans.png'
+import { FaSearch, FaMicrophone, FaEnvira} from 'react-icons/fa'
 
 function App() {
+  const [text, setText] = useState(null);
+
+  const update = (e) => {
+    setText(e.target.value)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className='container'>
+      <header>
+        <nav>
+          <p>Gmail</p>
+          <p>Images</p>
+          <div className="cir-grid">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div className="avatar"></div>
+        </nav>
       </header>
+      <main>
+        <div className="wrapper">
+          {text ? <h1>{text}</h1> : <img src={logo} alt="" /> }
+        </div>
+        <div className="input">
+          <FaSearch className='icon' />
+          <input type="text" onChange={update}/>
+          <FaMicrophone className='icon mic' />
+        </div>
+      </main>
+      <section>
+        <div className="btn-wrapper">
+          <button>Google Search</button>
+          <button>I'm Feeling Lucky</button>
+        </div>
+        <div className="lang">
+          <p>Google offered in:</p>
+          <span>Hausa</span> <span>Igbo</span>
+          <span>Èdè Yorùbá</span> <span>nigerian Pidgin</span>
+        </div>
+      </section>
+      <footer>
+        
+      </footer>
     </div>
   );
 }
